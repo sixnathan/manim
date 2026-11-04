@@ -1,41 +1,65 @@
-# The Geometry of Adding
+# Stewart chapter 15 — the geometry of multiple integrals
 
-An original animated guide to Stewart's chapter 15, **Multiple Integrals**.
-Section numbers follow *Calculus: Early Transcendentals*, eighth edition; the user's edition is unconfirmed.
+The revised film is an original **Manim animation** covering Stewart’s chapter 15, Multiple Integrals. It uses growing columns, moving cross sections, integration strips, a grid bending into polar coordinates, lifted surface patches, spherical shell blocks, and a deformed coordinate grid to motivate the Jacobian.
 
-Open `output/index.html` for the local player, chapter navigation, transcript, source links, and practice questions. Or play `output/chapter15_multiple_integrals.mp4` directly.
+Section numbering follows *Calculus: Early Transcendentals*, eighth edition. The user’s edition has not been confirmed. This is a conceptual chapter guide with selected worked examples, rather than a treatment of every exercise.
 
-The video develops double integrals, iterated integration, general regions and reversed bounds, polar area, mass and balance, probability density, surface area, triple integrals, cylindrical and spherical coordinates, and the Jacobian. It is a conceptual chapter guide with selected worked examples, rather than a replacement for every textbook example and exercise.
+## Watch on a Mac
 
-## Files
-
-- `lesson.py`: original narration and mathematical formulas.
-- `render.py`: editable animation, narration, caption, and video renderer.
-- `package.py`: local player and transcript builder.
-- `assets/audio/`: synthetic narration, one MP3 per scene.
-- `assets/references/`: two downloaded MIT reference PDFs.
-- `output/`: final video, individual scenes, storyboard, stills, captions, and chapter data.
-
-## Rebuild
-
-All dependencies are in `.venv/`; caches and temporary files are directed into `.cache/`. No system installations are required. The renderer uses Pillow and mathematical typesetting from Matplotlib, with the FFmpeg executable bundled inside the local Python environment. It does not require Manim or LaTeX.
+After cloning or pulling this repository, run these commands from the repository folder:
 
 ```bash
-.venv/bin/python render.py --audio
-.venv/bin/python render.py --stills
-.venv/bin/python render.py
-.venv/bin/python package.py
+git pull origin main
+open output/chapter15_multiple_integrals.mp4
 ```
 
-Audio generation requires internet access to Microsoft Edge TTS and sends only the original narration text. The rendering and packaging steps work offline after audio exists. Existing `output/scene_XX.mp4` files are reused, so move the affected scene files aside before rebuilding edited scenes. Audio is likewise reused by scene name; move an affected narration MP3 aside after changing its script.
+To sample the opening before watching the full film:
 
-The captions are timed proportionally within each scene, not force-aligned word by word. They are burned into the picture and supplied as SRT, WebVTT, and an embedded MP4 subtitle track.
+```bash
+open output/chapter15_preview.mp4
+```
 
-## Sources and attribution
+For the local player with section navigation:
 
-- [University of Minnesota: Stewart eighth-edition contents](https://advise.chem.umn.edu/sites/advise.chem.umn.edu/files/files/math_1271-1272-2263_text_toc_stewart_calculus_early_transcendentals_8th_ed.pdf). Used to check section names and numbering. The direct download returned HTTP 403; the contents were verified through the web reader instead.
-- [MIT OpenCourseWare: Gilbert Strang, Calculus, chapter 14](https://ocw.mit.edu/courses/res-18-001-calculus-fall-2023/mitres_18_001_f17_ch14.pdf). Downloaded unchanged as `assets/references/mit_strang_multiple_integrals.pdf`.
-- [MIT OpenCourseWare, 18.02, Fall 2007: Changing Variables in Multiple Integrals](https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/05f51f37ac3bb5801af56e6879728f68_multipl_integrls.pdf). Downloaded unchanged as `assets/references/mit_change_of_variables.pdf`.
-- [MIT: Determining the Area or Volume Element](https://ocw.mit.edu/ans7870/18/18.013a/textbook/HTML/chapter31/section04.html). Supplemental check of determinant geometry.
+```bash
+open output/index.html
+```
 
-Reference PDFs retain their original rights and attribution; see [MIT OCW terms](https://ocw.mit.edu/pages/privacy-and-terms-of-use/). No textbook pages or third-party artwork are reproduced in the video. All video diagrams, prose, and example presentations are original. Synthetic narration uses `en-GB-RyanNeural`, with no voice imitation. The project is unaffiliated with 3Blue1Brown, Stewart, MIT, or Cengage.
+Watching needs no Python, Manim, or other project dependencies. Captions are available as an optional embedded subtitle track, SRT, and WebVTT. Narration is synthetic (`en-US-AndrewNeural`) and is synchronized to individual visual passages; caption sentences are paced within those passages.
+
+## Editable source
+
+- `v2/film.py`: actual Manim scenes and editable vector equations.
+- `v2/script.py`: original narration in short visual passages.
+- `v2/audio.py`: narration generation and duration measurements.
+- `v2/assemble.py`: final video, section metadata, captions, transcript, and player.
+- `v2/environment.yml`: reproducible Manim environment specification.
+- `output/`: the watchable MP4, opening preview, player, storyboard, captions, and transcript.
+- `assets/references/`: unchanged downloaded reference PDFs.
+
+The earlier prototype’s `lesson.py`, `render.py`, and `package.py` are retained for reference. The current film is produced by the `v2/` sources.
+
+## Render locally
+
+Use the dependencies in `v2/environment.yml` (Manim Community 0.22.1, Matplotlib 3.11.2, and FFmpeg). The existing local environment is `.manim-env/`. Native dependencies, caches, and tools for this build are entirely inside this repository directory and are excluded from Git.
+
+Narration generation also needs `edge-tts` from `requirements.txt`; the existing `.venv/` provides it. Only this generation step needs internet access. It sends the original narration text to Microsoft Edge TTS.
+
+```bash
+.venv/bin/python v2/audio.py
+PATH="$PWD/.manim-env/bin:$PATH" XDG_CACHE_HOME="$PWD/.cache" \
+  .manim-env/bin/manim -qh --fps 30 --media_dir v2/media \
+  v2/film.py Volume Slices Bounds Polar Density SurfaceArea Solids Spherical Jacobian
+.manim-env/bin/python v2/assemble.py
+```
+
+Intermediate renders, native environments, and narration MP3s are excluded from Git. The finished MP4 is committed directly and can be watched after an ordinary clone or pull. Equations are editable SVG vector paths generated with Computer Modern math fonts; no system LaTeX installation is needed.
+
+## Sources
+
+- [University of Minnesota: Stewart eighth-edition contents](https://advise.chem.umn.edu/sites/advise.chem.umn.edu/files/files/math_1271-1272-2263_text_toc_stewart_calculus_early_transcendentals_8th_ed.pdf): section alignment.
+- [MIT OpenCourseWare: Gilbert Strang, Calculus, chapter 14, Multiple Integrals](https://ocw.mit.edu/courses/res-18-001-calculus-fall-2023/mitres_18_001_f17_ch14.pdf): downloaded as `assets/references/mit_strang_multiple_integrals.pdf`. Its chapter number belongs to Strang’s book; the topic corresponds to Stewart chapter 15.
+- [MIT OpenCourseWare, 18.02, Fall 2007: Changing Variables in Multiple Integrals](https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/05f51f37ac3bb5801af56e6879728f68_multipl_integrls.pdf): downloaded as `assets/references/mit_change_of_variables.pdf`.
+- [MIT: Determining the Area or Volume Element](https://ocw.mit.edu/ans7870/18/18.013a/textbook/HTML/chapter31/section04.html): supplemental reference for determinant geometry.
+
+Reference PDFs retain their original rights and attribution; see [MIT OCW terms](https://ocw.mit.edu/pages/privacy-and-terms-of-use/). The film’s diagrams, prose, animations, and example presentations are original. The project is unaffiliated with 3Blue1Brown, Stewart, MIT, or Cengage.

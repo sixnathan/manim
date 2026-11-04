@@ -1,497 +1,508 @@
 WEBVTT
 
-1
-00:00:00.000 --> 00:00:07.279
-What does a double integral actually mean? And why does changing coordinates suddenly introduce a
-
-2
-00:00:07.279 --> 00:00:14.408
-mysterious extra factor? This chapter is one idea seen from several angles. Break a region into
-
-3
-00:00:14.408 --> 00:00:21.162
-tiny pieces. Work out what each piece contributes. Then add everything. We will build that
-
-4
-00:00:21.162 --> 00:00:28.441
-picture, learn to read integration bounds from a drawing, and watch the polar and spherical scale
-
-5
-00:00:28.441 --> 00:00:35.720
-factors emerge from geometry. Keep asking two questions: what are the pieces, and how big is each
-
-6
-00:00:35.720 --> 00:00:36.020
-one?
-
-7
-00:00:37.833 --> 00:00:44.335
-Imagine a landscape whose height above the floor is f of x and y. Cover the floor with a
-
-8
-00:00:44.335 --> 00:00:51.501
-rectangular grid. Above each little tile, build a column reaching up to the landscape. Its volume
-
-9
-00:00:51.501 --> 00:00:58.741
-is height times base area. The blue tile tells us where we sample. The yellow column tells us what
-
-10
-00:00:58.741 --> 00:01:05.464
-we add. At first this is only an approximation. A coarse column misses some of the changing
-
-11
-00:01:05.464 --> 00:01:07.163
-surface above its tile.
-
-12
-00:01:09.000 --> 00:01:16.152
-Now shrink the tiles. The staircase of columns follows the surface more closely. For a continuous
-
-13
-00:01:16.152 --> 00:01:22.861
-function on this rectangle, the sums converge to a single number. That number is the double
-
-14
-00:01:22.861 --> 00:01:29.644
-integral. Notice that the two integral signs describe a two dimensional collection of sample
-
-15
-00:01:29.644 --> 00:01:36.648
-points. They do not mean we are squaring an ordinary integral. If the function is negative, its
-
-16
-00:01:36.648 --> 00:01:43.800
-contribution is negative too. Only a nonnegative height gives ordinary geometric volume directly.
-
-17
-00:01:45.625 --> 00:01:53.655
-We cannot literally add infinitely many columns one by one. Instead, group them into strips.
-
-18
-00:01:53.655 --> 00:02:01.161
-Freeze x. Within that strip, integrate along y from zero to one. Since x is fixed, its
-
-19
-00:02:01.161 --> 00:02:09.279
-contribution is simply x times a length of one. Integrating y contributes one half. The strip
-
-20
-00:02:09.279 --> 00:02:17.745
-therefore has cross sectional area x plus one half. Now integrate those areas as x runs from zero
-
-21
-00:02:17.745 --> 00:02:23.855
-to two. The result is three cubic units. This is an iterated integral.
-
-22
-00:02:25.667 --> 00:02:32.328
-We could group the same columns into rows running the other way. For continuous functions on a
-
-23
-00:02:32.328 --> 00:02:39.273
-rectangle, Fubini's theorem says both orders give the same total. The inner differential tells you
-
-24
-00:02:39.273 --> 00:02:45.863
-which direction to sweep first. Read from the inside outward. Switching the order can turn an
-
-25
-00:02:45.863 --> 00:02:52.383
-awkward calculation into an easy one. But this is a theorem with hypotheses. Continuity is a
-
-26
-00:02:52.383 --> 00:02:58.903
-useful sufficient condition here; do not assume every improper integral permits an arbitrary
-
-27
-00:02:58.903 --> 00:03:00.037
-change of order.
-
-28
-00:03:01.875 --> 00:03:09.572
-Rectangles are friendly because every strip has the same endpoints. Real regions often curve. Look
-
-29
-00:03:09.572 --> 00:03:16.877
-at the lens between y equals x squared and y equals x. Move a vertical scan line from left to
-
-30
-00:03:16.877 --> 00:03:24.574
-right. Each time, it enters at the parabola and leaves at the line. That observation is the entire
-
-31
-00:03:24.574 --> 00:03:32.193
-setup. The outer bounds are zero to one. The inner bounds are x squared to x. The bounds encode a
-
-32
-00:03:32.193 --> 00:03:35.335
-picture, rather than a rule to memorize.
-
-33
-00:03:37.167 --> 00:03:44.788
-Now sweep horizontally. At a fixed height y, the left edge lies on x equals y. The right edge lies
-
-34
-00:03:44.788 --> 00:03:52.409
-on x equals the square root of y. These are the same two curves solved for x. The total region has
-
-35
-00:03:52.409 --> 00:03:59.874
-not changed, but the description has. With height one, either order gives the area: the integral
-
-36
-00:03:59.874 --> 00:04:06.562
-from zero to one of x minus x squared, which is one sixth. A good check is to draw one
-
-37
-00:04:06.562 --> 00:04:10.217
-representative strip and verify both endpoints.
-
-38
-00:04:12.042 --> 00:04:19.819
-A circular region fights a rectangular grid. So let the grid bend into rings and spokes. One tiny
-
-39
-00:04:19.819 --> 00:04:27.596
-tile has radial thickness d r. Its other side is a short circular arc. Arc length is radius times
-
-40
-00:04:27.596 --> 00:04:35.214
-angle, so that side has length r d theta. Multiply the two sides and you get r d r d theta. The
-
-41
-00:04:35.214 --> 00:04:42.590
-extra r is not an algebraic tax. Farther from the origin, equally spaced spokes enclose more
-
-42
-00:04:42.590 --> 00:04:47.802
-physical area. The differential must account for that stretching.
-
-43
-00:04:49.625 --> 00:04:56.831
-Consider the dome z equals one minus x squared minus y squared, above the unit disk. In polar
-
-44
-00:04:56.831 --> 00:05:04.038
-coordinates its height is one minus r squared. The radius runs from zero to one and the angle
-
-45
-00:05:04.038 --> 00:05:11.477
-makes one complete turn. Each little contribution is height times polar tile area. Integrating r
-
-46
-00:05:11.477 --> 00:05:18.761
-minus r cubed gives one quarter, and the full turn multiplies that by two pi. The volume is pi
-
-47
-00:05:18.761 --> 00:05:24.495
-over two. The symmetry has made both the region and the integrand simpler.
-
-48
-00:05:26.333 --> 00:05:33.423
-The floor tile need not carry a height. It might carry density. If delta is mass per unit area,
-
-49
-00:05:33.423 --> 00:05:40.662
-then delta times tile area is a tiny mass. Add those masses to get the mass of a thin sheet. If f
-
-50
-00:05:40.662 --> 00:05:47.602
-represents temperature instead, the integral sums temperature weighted by area. Divide by the
-
-51
-00:05:47.602 --> 00:05:54.841
-total area to obtain the average temperature. The operation is the same; the meaning and units of
-
-52
-00:05:54.841 --> 00:05:58.273
-the integrand change what the answer measures.
-
-53
-00:06:00.083 --> 00:06:06.971
-To find a balance point, weight each position by the mass sitting there. The x coordinate of the
-
-54
-00:06:06.971 --> 00:06:13.859
-center of mass is the integral of x times density, divided by total mass. The y coordinate works
-
-55
-00:06:13.859 --> 00:06:20.818
-the same way. Here density grows toward the right, so the balance point shifts right. On the unit
-
-56
-00:06:20.818 --> 00:06:27.562
-square with density one plus x, the mass is three halves and the center is at five ninths, one
-
-57
-00:06:27.562 --> 00:06:34.235
-half. Moments of inertia use squared distance instead: mass farther from an axis matters much
-
-58
-00:06:34.235 --> 00:06:34.593
-more.
-
-59
-00:06:36.417 --> 00:06:43.439
-A probability density uses exactly the same machinery. A small tile carries approximately density
-
-60
-00:06:43.439 --> 00:06:50.245
-times tile area of probability. Integrating over a region gives the chance that a random point
-
-61
-00:06:50.245 --> 00:06:57.340
-lands inside it. The density must be nonnegative and its integral over all possible positions must
-
-62
-00:06:57.340 --> 00:07:04.146
-be one. A density value itself can exceed one; the probability of a region cannot. Likewise, a
-
-63
-00:07:04.146 --> 00:07:11.024
-moment of inertia integrates squared distance to an axis times mass density. The geometry tells
-
-64
-00:07:11.024 --> 00:07:16.237
-you the pieces, and the integrand tells you what each piece contributes.
-
-65
-00:07:18.042 --> 00:07:24.996
-A different question: how much material would you need to cover the landscape itself? That is
-
-66
-00:07:24.996 --> 00:07:32.101
-surface area, rather than the volume underneath. A small patch projects to a tile on the floor,
-
-67
-00:07:32.101 --> 00:07:39.429
-but tilting makes the surface patch larger than its shadow. Near a point, replace the surface with
-
-68
-00:07:39.429 --> 00:07:46.683
-its tangent plane. Two tangent edges are represented by the vectors one, zero, f sub x, and zero,
-
-69
-00:07:46.683 --> 00:07:53.787
-one, f sub y. Their cross product has length the square root of one plus f sub x squared plus f
-
-70
-00:07:53.787 --> 00:07:57.452
-sub y squared. This is the local area multiplier.
-
-71
-00:07:59.292 --> 00:08:05.957
-For a concrete example, take the plane z equals x plus y above the unit square. Its slope in each
-
-72
-00:08:05.957 --> 00:08:12.278
-coordinate direction is one. Therefore every shadow tile corresponds to a surface patch with
-
-73
-00:08:12.278 --> 00:08:18.943
-square root of three times as much area. Integrate that constant factor over the unit square: the
-
-74
-00:08:18.943 --> 00:08:25.676
-surface area is square root of three. If the surface were horizontal, both slopes would vanish and
-
-75
-00:08:25.676 --> 00:08:32.273
-the multiplier would become one. This surface stretching is closely related to the Jacobian idea
-
-76
-00:08:32.273 --> 00:08:33.922
-we will meet at the end.
-
-77
-00:08:35.750 --> 00:08:43.271
-For a solid region, replace floor tiles with tiny boxes. Their volume is d x times d y times d z.
-
-78
-00:08:43.271 --> 00:08:50.714
-Integrating one counts volume. Integrating a volume density counts mass. The third integral sign
-
-79
-00:08:50.714 --> 00:08:58.080
-means the sample points now fill a three dimensional region. To choose bounds, start with a box
-
-80
-00:08:58.080 --> 00:09:05.678
-somewhere inside the solid. Trace the innermost direction until you hit the two bounding surfaces.
-
-81
-00:09:05.678 --> 00:09:10.330
-Then describe where the remaining two coordinates can range.
-
-82
-00:09:12.167 --> 00:09:19.951
-Take the tetrahedron in the positive octant below x plus y plus z equals one. At a fixed x and y,
-
-83
-00:09:19.951 --> 00:09:27.656
-a vertical column starts on z equals zero and stops at z equals one minus x minus y. Project the
-
-84
-00:09:27.656 --> 00:09:35.360
-solid onto the floor. That shadow is a triangle where x and y are nonnegative and x plus y is at
-
-85
-00:09:35.360 --> 00:09:43.064
-most one. This gives y from zero to one minus x, and x from zero to one. The volume works out to
-
-86
-00:09:43.064 --> 00:09:43.867
-one sixth.
-
-87
-00:09:45.667 --> 00:09:52.573
-A cylinder suggests a polar grid on the floor and an ordinary vertical coordinate. Extrude each
-
-88
-00:09:52.573 --> 00:09:59.553
-polar tile through a small height d z. Its volume is r d r d theta d z. Nothing new has happened
-
-89
-00:09:59.553 --> 00:10:06.677
-to the stretching: it is still the widening of the spokes in the floor. For a cylinder of radius a
-
-90
-00:10:06.677 --> 00:10:13.366
-and height h, integrating one gives pi a squared h. This is a useful check that the factor r
-
-91
-00:10:13.366 --> 00:10:15.547
-belongs in the volume element.
-
-92
-00:10:17.375 --> 00:10:24.610
-For a ball, even cylindrical coordinates leave a curved boundary. Spherical coordinates measure
-
-93
-00:10:24.610 --> 00:10:31.845
-distance rho from the origin, angle theta around the vertical axis, and angle phi down from the
-
-94
-00:10:31.845 --> 00:10:38.928
-positive z axis. This last convention matters. Phi is the polar angle, not latitude above the
-
-95
-00:10:38.928 --> 00:10:46.391
-equator. A full ball has rho from zero to its radius, theta from zero to two pi, and phi from zero
-
-96
-00:10:46.391 --> 00:10:51.265
-to pi. Now look closely at one small block on a spherical shell.
-
-97
-00:10:53.083 --> 00:11:00.597
-The block has three short edges. Its radial thickness is d rho. Moving down a meridian gives
-
-98
-00:11:00.597 --> 00:11:08.275
-length rho d phi. Moving around the latitude circle gives length rho sine phi d theta, because
-
-99
-00:11:08.275 --> 00:11:16.034
-that circle has radius rho sine phi. Multiply all three lengths. The result is rho squared sine
-
-100
-00:11:16.034 --> 00:11:23.875
-phi times the three coordinate changes. Near the pole, latitude circles shrink. Near the equator
-
-101
-00:11:23.875 --> 00:11:29.183
-they are largest. The sine factor captures exactly that geometry.
-
-102
-00:11:31.000 --> 00:11:38.309
-Integrate one over a ball of radius a using that volume element. The radial integral gives a cubed
-
-103
-00:11:38.309 --> 00:11:45.395
-over three. The polar angle integral of sine gives two. The azimuthal angle contributes two pi.
-
-104
-00:11:45.395 --> 00:11:52.555
-Together they give four pi a cubed over three. Forgetting the sine would count too much near the
-
-105
-00:11:52.555 --> 00:11:59.640
-poles. Forgetting rho squared would fail to account for shells growing as you move outward. The
-
-106
-00:11:59.640 --> 00:12:04.190
-familiar volume formula is a check on our tiny block picture.
-
-107
-00:12:06.000 --> 00:12:12.660
-Polar coordinates are one example of a general idea. Start with a tiny rectangle in a u v
-
-108
-00:12:12.660 --> 00:12:19.993
-parameter plane. A smooth transformation sends it to an approximately parallelogram shaped tile in
-
-109
-00:12:19.993 --> 00:12:27.102
-the x y plane. Its two edge directions come from the partial derivatives of the transformation.
-
-110
-00:12:27.102 --> 00:12:34.286
-Their determinant measures signed area scaling. We take the absolute value because physical area
-
-111
-00:12:34.286 --> 00:12:40.946
-is nonnegative. This determinant is the Jacobian. It is the local conversion rate between
-
-112
-00:12:40.946 --> 00:12:43.490
-coordinate area and physical area.
-
-113
-00:12:45.292 --> 00:12:52.581
-For example, stretch a unit disk by a factor of two horizontally. The map x equals two u, y equals
-
-114
-00:12:52.581 --> 00:12:59.796
-v turns the disk into an ellipse. Every tiny area doubles, so the Jacobian is two and the ellipse
-
-115
-00:12:59.796 --> 00:13:06.490
-has area two pi. In general, transform both the region and the integrand, then include the
-
-116
-00:13:06.490 --> 00:13:13.185
-absolute Jacobian. Use a transformation that covers the region once, apart from negligible
-
-117
-00:13:13.185 --> 00:13:20.325
-boundaries, and is locally invertible in its interior. Otherwise you may accidentally count some
-
-118
-00:13:20.325 --> 00:13:21.962
-points more than once.
-
-119
-00:13:23.792 --> 00:13:31.199
-Here is the workflow to carry into the exercises. Sketch the region first. Choose coordinates that
-
-120
-00:13:31.199 --> 00:13:38.607
-fit its shape. Draw a representative tiny piece and identify its size. Read the bounds by sweeping
-
-121
-00:13:38.607 --> 00:13:45.939
-that piece through the region. Then integrate from the inside outward. Check the sign, the units,
-
-122
-00:13:45.939 --> 00:13:53.119
-and the scale of the result. Double integrals, triple integrals, and Jacobians are connected by
-
-123
-00:13:53.119 --> 00:14:00.527
-this same picture: local contribution, times the size of a piece, added over the whole region. The
-
-124
-00:14:00.527 --> 00:14:03.702
-symbols should now remind you of geometry.
+00:00:01.000 --> 00:00:03.760
+Suppose this curved roof were made of glass.
+
+00:00:03.760 --> 00:00:05.768
+How much space is underneath it?
+
+00:00:05.768 --> 00:00:08.026
+A formula might tell you the answer.
+
+00:00:08.026 --> 00:00:10.912
+But first, let us build an answer you can see.
+
+00:00:11.267 --> 00:00:13.399
+Choose one small square on the floor.
+
+00:00:13.399 --> 00:00:15.358
+Lift it until it touches the roof.
+
+00:00:15.358 --> 00:00:16.684
+You have made a column.
+
+00:00:16.684 --> 00:00:18.701
+Its height comes from the function.
+
+00:00:18.701 --> 00:00:20.891
+Its base comes from the little square.
+
+00:00:21.267 --> 00:00:24.540
+So this one piece contributes height times base area.
+
+00:00:24.540 --> 00:00:26.948
+The height changes from place to place.
+
+00:00:26.948 --> 00:00:30.963
+That is why counting the squares alone cannot give us the volume.
+
+00:00:31.333 --> 00:00:32.777
+Now do that everywhere.
+
+00:00:32.777 --> 00:00:35.600
+The columns leave a staircase along the roof.
+
+00:00:35.600 --> 00:00:38.298
+Add their volumes, and you get an estimate.
+
+00:00:38.298 --> 00:00:41.749
+Each term in this sum belongs to one particular column.
+
+00:00:42.100 --> 00:00:43.738
+Make the squares smaller.
+
+00:00:43.738 --> 00:00:45.966
+The staircase begins to disappear.
+
+00:00:45.966 --> 00:00:53.044
+Nothing fundamentally new is happening: we are still multiplying a height by an area, and adding the pieces.
+
+00:00:53.400 --> 00:00:57.302
+The double integral names the number these estimates approach.
+
+00:00:57.302 --> 00:01:02.212
+The double sign means our sample points spread across a two dimensional floor.
+
+00:01:02.212 --> 00:01:06.240
+The answer is a volume because we chose height as the integrand.
+
+00:01:08.299 --> 00:01:11.625
+There is a clever way to organize all those columns.
+
+00:01:11.625 --> 00:01:14.119
+Keep x fixed, and collect a single row.
+
+00:01:14.119 --> 00:01:18.979
+Together, the little columns approximate a vertical slice through the solid.
+
+00:01:19.333 --> 00:01:22.293
+Adding along y gives the area of that slice.
+
+00:01:22.293 --> 00:01:25.185
+During this first integration, x is frozen.
+
+00:01:25.185 --> 00:01:28.549
+The slice area still depends on which x you chose.
+
+00:01:28.899 --> 00:01:31.432
+Now slide the slice across the floor.
+
+00:01:31.432 --> 00:01:34.034
+Add its area times its tiny thickness.
+
+00:01:34.034 --> 00:01:39.099
+The outer integral adds the slices, and the result is the original volume.
+
+00:01:39.466 --> 00:01:41.800
+We could slice in the other direction.
+
+00:01:41.800 --> 00:01:47.327
+For a continuous function on a rectangle, Fubini says both groupings give the same number.
+
+00:01:47.327 --> 00:01:51.442
+We have changed the bookkeeping, while keeping all the same pieces.
+
+00:01:51.799 --> 00:01:58.808
+For height x plus y, over this two by one rectangle, the inner integral is x plus one half.
+
+00:01:58.808 --> 00:02:01.966
+Integrating from zero to two gives three.
+
+00:02:01.966 --> 00:02:06.895
+Read the differentials from the inside outward: first y, then x.
+
+00:02:08.566 --> 00:02:10.953
+But a floor need not be a rectangle.
+
+00:02:10.953 --> 00:02:15.528
+Here is the region trapped between y equals x squared and y equals x.
+
+00:02:15.528 --> 00:02:19.174
+How do we tell the integral which points belong inside?
+
+00:02:19.499 --> 00:02:21.425
+Draw one vertical scan line.
+
+00:02:21.425 --> 00:02:25.415
+It enters at the parabola and leaves at the straight line.
+
+00:02:25.415 --> 00:02:31.331
+As x travels from zero to one, this little strip sweeps the whole region exactly once.
+
+00:02:31.666 --> 00:02:33.735
+That drawing gives the bounds.
+
+00:02:33.735 --> 00:02:36.012
+The lower edge becomes x squared.
+
+00:02:36.012 --> 00:02:37.736
+The upper edge becomes x.
+
+00:02:37.736 --> 00:02:41.530
+The outer bounds describe the journey of the scan line.
+
+00:02:41.530 --> 00:02:43.186
+No guessing is required.
+
+00:02:43.533 --> 00:02:45.722
+Now turn the scan line sideways.
+
+00:02:45.722 --> 00:02:50.033
+At a fixed height y, the line is the left boundary: x equals y.
+
+00:02:50.033 --> 00:02:54.549
+The parabola is the right boundary: x equals the square root of y.
+
+00:02:54.866 --> 00:02:58.670
+These two integrals describe precisely the same shaded region.
+
+00:02:58.670 --> 00:03:01.861
+Switching the order means solving for new endpoints.
+
+00:03:01.861 --> 00:03:06.770
+It does not mean swapping the differential symbols and leaving the bounds alone.
+
+00:03:07.099 --> 00:03:10.308
+As a quick check, set the height equal to one.
+
+00:03:10.308 --> 00:03:12.958
+Then you are simply adding floor area.
+
+00:03:12.958 --> 00:03:16.306
+The vertical strip has length x minus x squared.
+
+00:03:16.306 --> 00:03:18.259
+The total area is one sixth.
+
+00:03:19.899 --> 00:03:24.407
+For a disk, rectangular strips feel like the wrong building blocks.
+
+00:03:24.407 --> 00:03:27.233
+What if we gave our grid rings and spokes?
+
+00:03:27.233 --> 00:03:32.211
+Imagine this ordinary coordinate rectangle bending into a circular region.
+
+00:03:32.561 --> 00:03:34.445
+Focus on one little tile.
+
+00:03:34.445 --> 00:03:36.555
+Its radial thickness is d r.
+
+00:03:36.555 --> 00:03:38.816
+Its other edge is a short arc.
+
+00:03:38.816 --> 00:03:42.809
+An angle d theta cuts off arc length r times d theta.
+
+00:03:43.128 --> 00:03:46.347
+Keep the angle fixed, but push the tile outward.
+
+00:03:46.347 --> 00:03:47.889
+Its angular edge grows.
+
+00:03:47.889 --> 00:03:54.192
+Twice the radius gives twice the area, even though the coordinate increments have not changed.
+
+00:03:54.528 --> 00:03:56.935
+This is where the extra r comes from.
+
+00:03:56.935 --> 00:04:01.359
+The physical area of a tiny polar tile is r times d r times d theta.
+
+00:04:01.359 --> 00:04:04.872
+The formula records a stretch you just watched happen.
+
+00:04:05.195 --> 00:04:10.940
+Now return to a roof: one minus x squared minus y squared, above the unit disk.
+
+00:04:10.940 --> 00:04:15.377
+In polar coordinates, the height becomes one minus r squared.
+
+00:04:15.377 --> 00:04:19.595
+The disk becomes a simple rectangle of coordinate choices.
+
+00:04:19.928 --> 00:04:22.005
+Multiply height by tile area.
+
+00:04:22.005 --> 00:04:25.874
+The radial integral of r minus r cubed is one quarter.
+
+00:04:25.874 --> 00:04:28.238
+One full turn contributes two pi.
+
+00:04:28.238 --> 00:04:30.100
+The volume is pi over two.
+
+00:04:30.100 --> 00:04:34.040
+The geometry simplified both the bounds and the height.
+
+00:04:35.666 --> 00:04:39.219
+The little floor tile could carry something other than height.
+
+00:04:39.219 --> 00:04:41.397
+Suppose it carries mass per unit area.
+
+00:04:41.397 --> 00:04:44.090
+Here the sheet becomes denser toward the right.
+
+00:04:44.433 --> 00:04:46.995
+Density times tile area is a little mass.
+
+00:04:46.995 --> 00:04:50.306
+Add those contributions to get the mass of the sheet.
+
+00:04:50.306 --> 00:04:54.993
+We have changed what the integrand means, while keeping the same operation.
+
+00:04:55.333 --> 00:04:59.877
+To find the balance point, let each little mass vote for its position.
+
+00:04:59.877 --> 00:05:05.005
+Weight the x coordinate by mass, add those votes, and divide by the total mass.
+
+00:05:05.005 --> 00:05:07.861
+Heavier places pull the average toward them.
+
+00:05:08.199 --> 00:05:12.791
+On the unit square with density one plus x, the mass is three halves.
+
+00:05:12.791 --> 00:05:16.585
+The balance point is five ninths across, and one half up.
+
+00:05:16.585 --> 00:05:20.511
+It shifts right because that is where the extra mass lives.
+
+00:05:20.833 --> 00:05:23.659
+The same picture gives other applications.
+
+00:05:23.659 --> 00:05:26.957
+Average value divides the weighted total by area.
+
+00:05:26.957 --> 00:05:31.399
+A moment of inertia weights mass by squared distance from an axis.
+
+00:05:31.399 --> 00:05:36.985
+A probability density assigns probability to each tiny tile; its total must be one.
+
+00:05:39.033 --> 00:05:41.408
+Now imagine painting the roof itself.
+
+00:05:41.408 --> 00:05:45.068
+The area you paint is larger than the area of its shadow.
+
+00:05:45.068 --> 00:05:49.113
+A floor tile and its lifted surface patch have different sizes.
+
+00:05:49.466 --> 00:05:50.862
+Watch the patch tilt.
+
+00:05:50.862 --> 00:05:54.054
+Its shadow stays fixed, but the patch stretches.
+
+00:05:54.054 --> 00:05:59.906
+Close enough to a point, the tangent plane tells us exactly how that stretching behaves.
+
+00:06:00.266 --> 00:06:05.608
+Moving one unit in x gives the tangent direction one, zero, f sub x.
+
+00:06:05.608 --> 00:06:09.222
+Moving one unit in y gives zero, one, f sub y.
+
+00:06:09.222 --> 00:06:14.642
+Their cross product measures the area of the parallelogram they span.
+
+00:06:14.999 --> 00:06:19.330
+Its length is the square root of one plus the two squared slopes.
+
+00:06:19.330 --> 00:06:23.727
+Multiply floor area by this local factor, then add over the floor.
+
+00:06:23.727 --> 00:06:27.791
+This computes surface area rather than the volume underneath.
+
+00:06:28.166 --> 00:06:31.854
+For the plane z equals x plus y, both slopes are one.
+
+00:06:31.854 --> 00:06:35.541
+Every patch is square root of three times its shadow.
+
+00:06:35.541 --> 00:06:40.551
+Above a unit square, the surface area is therefore square root of three.
+
+00:06:40.551 --> 00:06:43.334
+A horizontal roof would have factor one.
+
+00:06:45.399 --> 00:06:49.268
+A triple integral begins with a new kind of region.
+
+00:06:49.268 --> 00:06:51.923
+Our sample points now fill a solid.
+
+00:06:51.923 --> 00:06:56.703
+The tiny pieces are boxes, with volume d x times d y times d z.
+
+00:06:57.066 --> 00:07:02.783
+Consider the tetrahedron in the positive octant, under x plus y plus z equals one.
+
+00:07:02.783 --> 00:07:05.572
+Choose a point in its triangular shadow.
+
+00:07:05.572 --> 00:07:10.314
+A vertical column starts on the floor and stops at the sloping face.
+
+00:07:10.666 --> 00:07:14.113
+The roof gives z equals one minus x minus y.
+
+00:07:14.113 --> 00:07:17.561
+The shadow gives y from zero to one minus x.
+
+00:07:17.561 --> 00:07:20.381
+Finally, x travels from zero to one.
+
+00:07:20.381 --> 00:07:23.986
+Read those boundaries from the inside outward.
+
+00:07:24.366 --> 00:07:26.855
+Integrate one, and you count volume.
+
+00:07:26.855 --> 00:07:30.450
+First the z integral becomes the height of a column.
+
+00:07:30.450 --> 00:07:33.768
+Then the y integral becomes the area of a slice.
+
+00:07:33.768 --> 00:07:36.534
+Finally, the x integral gives one sixth.
+
+00:07:36.899 --> 00:07:41.088
+For a round solid, replace the floor grid with polar tiles.
+
+00:07:41.088 --> 00:07:42.650
+Stack them vertically.
+
+00:07:42.650 --> 00:07:45.063
+Their volume is r d r d theta d z.
+
+00:07:45.063 --> 00:07:50.459
+Cylindrical coordinates are simply polar coordinates with a height attached.
+
+00:07:51.532 --> 00:07:54.633
+A ball suggests one more change of coordinates.
+
+00:07:54.633 --> 00:08:03.340
+Describe a point by distance rho from the center, angle theta around the vertical axis, and angle phi down from the positive z axis.
+
+00:08:03.699 --> 00:08:06.838
+Cut out one small block from a spherical shell.
+
+00:08:06.838 --> 00:08:09.376
+There are three lengths to understand.
+
+00:08:09.376 --> 00:08:11.380
+Its radial thickness is d rho.
+
+00:08:11.380 --> 00:08:13.851
+Its north to south edge is rho d phi.
+
+00:08:14.232 --> 00:08:17.645
+The east to west edge follows a latitude circle.
+
+00:08:17.645 --> 00:08:20.204
+That circle has radius rho sine phi.
+
+00:08:20.204 --> 00:08:23.759
+So the third edge has length rho sine phi d theta.
+
+00:08:23.759 --> 00:08:27.384
+Near a pole, the latitude circle almost disappears.
+
+00:08:27.766 --> 00:08:30.023
+Multiply the three short lengths.
+
+00:08:30.023 --> 00:08:34.539
+The tiny volume is rho squared sine phi times d rho d phi d theta.
+
+00:08:34.539 --> 00:08:37.685
+The squared radius accounts for larger shells.
+
+00:08:37.685 --> 00:08:41.038
+The sine accounts for shrinking latitude circles.
+
+00:08:41.399 --> 00:08:46.707
+For a full ball of radius a, the radial integral gives a cubed over three.
+
+00:08:46.707 --> 00:08:48.787
+The polar integral gives two.
+
+00:08:48.787 --> 00:08:50.724
+The full turn gives two pi.
+
+00:08:50.724 --> 00:08:54.239
+Together they recover four pi a cubed over three.
+
+00:08:55.899 --> 00:09:00.383
+Rings, spokes, and spherical shells are examples of a larger idea.
+
+00:09:00.383 --> 00:09:03.847
+A coordinate change is a machine that bends a grid.
+
+00:09:03.847 --> 00:09:08.331
+A unit of coordinate area need not become a unit of physical area.
+
+00:09:08.657 --> 00:09:10.307
+Zoom into a tiny square.
+
+00:09:10.307 --> 00:09:14.708
+A smooth map turns it into an almost parallelogram shaped patch.
+
+00:09:14.708 --> 00:09:17.252
+One edge follows the derivative in u.
+
+00:09:17.252 --> 00:09:19.865
+The other follows the derivative in v.
+
+00:09:20.190 --> 00:09:25.046
+The determinant of those two edge directions gives the signed area scale.
+
+00:09:25.046 --> 00:09:28.239
+Take its absolute value to obtain physical area.
+
+00:09:28.239 --> 00:09:33.294
+This is the Jacobian: the local exchange rate between the two kinds of area.
+
+00:09:33.623 --> 00:09:38.352
+Stretch a unit disk by two horizontally and leave its height alone.
+
+00:09:38.352 --> 00:09:39.693
+Every area doubles.
+
+00:09:39.693 --> 00:09:43.293
+The disk becomes an ellipse, so its area is two pi.
+
+00:09:43.293 --> 00:09:46.751
+A complicated boundary has become a familiar one.
+
+00:09:47.090 --> 00:09:53.533
+In general, change the region, substitute into the function, and include the absolute Jacobian.
+
+00:09:53.533 --> 00:10:01.874
+Use a smooth map that covers the region once, apart from negligible boundaries, with a nonzero determinant in the interior.
+
+00:10:02.223 --> 00:10:05.572
+That is the thread through Stewart chapter fifteen.
+
+00:10:05.572 --> 00:10:06.623
+Draw the pieces.
+
+00:10:06.623 --> 00:10:08.330
+Measure their actual size.
+
+00:10:08.330 --> 00:10:10.759
+Work out what each piece contributes.
+
+00:10:10.759 --> 00:10:11.350
+Then add.
+
+00:10:11.350 --> 00:10:16.143
+The integral is the total; the geometry tells you what belongs inside it.

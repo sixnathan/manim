@@ -1,117 +1,47 @@
 [
   {
-    "title": "One idea, in more dimensions",
+    "title": "15.1 \u00b7 Building a double integral",
     "start": 0,
-    "duration": 37.833
+    "duration": 67.299349
   },
   {
-    "title": "15.1  |  A landscape made of columns",
-    "start": 37.833,
-    "duration": 31.167
+    "title": "15.1 \u00b7 Fubini: slices of a solid",
+    "start": 67.299,
+    "duration": 60.666667
   },
   {
-    "title": "Refinement is the meaning of the integral",
-    "start": 69.0,
-    "duration": 36.625
+    "title": "15.2 \u00b7 Reading bounds from a picture",
+    "start": 127.966,
+    "duration": 71.333333
   },
   {
-    "title": "15.1  |  Add a row, then add the rows",
-    "start": 105.625,
-    "duration": 40.042
+    "title": "15.3 \u00b7 Why polar area contains r",
+    "start": 199.299,
+    "duration": 75.766667
   },
   {
-    "title": "Fubini: two ways of grouping the same pieces",
-    "start": 145.667,
-    "duration": 36.208
+    "title": "15.4 \u00b7 Mass, balance, and density",
+    "start": 275.066,
+    "duration": 62.966667
   },
   {
-    "title": "15.2  |  Bounds are a moving scan line",
-    "start": 181.875,
-    "duration": 35.292
+    "title": "15.5 \u00b7 The surface and its shadow",
+    "start": 338.033,
+    "duration": 66.366341
   },
   {
-    "title": "Turn the scan line sideways",
-    "start": 217.167,
-    "duration": 34.875
+    "title": "15.6\u201315.7 \u00b7 Triple and cylindrical integrals",
+    "start": 404.399,
+    "duration": 67.133333
   },
   {
-    "title": "15.3  |  Why a polar tile gets wider",
-    "start": 252.042,
-    "duration": 37.583
+    "title": "15.8 \u00b7 Three lengths on a spherical shell",
+    "start": 471.532,
+    "duration": 63.766667
   },
   {
-    "title": "A dome becomes a one-line calculation",
-    "start": 289.625,
-    "duration": 36.708
-  },
-  {
-    "title": "15.4  |  The integrand decides what you add",
-    "start": 326.333,
-    "duration": 33.75
-  },
-  {
-    "title": "Balance is a weighted average of position",
-    "start": 360.083,
-    "duration": 36.333
-  },
-  {
-    "title": "Probability is another kind of density",
-    "start": 396.417,
-    "duration": 41.625
-  },
-  {
-    "title": "15.5  |  The surface is larger than its shadow",
-    "start": 438.042,
-    "duration": 41.25
-  },
-  {
-    "title": "A tilted plane makes the factor visible",
-    "start": 479.292,
-    "duration": 36.458
-  },
-  {
-    "title": "15.6  |  Fill space with tiny boxes",
-    "start": 515.75,
-    "duration": 36.417
-  },
-  {
-    "title": "Read a solid from the inside outward",
-    "start": 552.167,
-    "duration": 33.5
-  },
-  {
-    "title": "15.7  |  Cylindrical coordinates stack polar tiles",
-    "start": 585.667,
-    "duration": 31.708
-  },
-  {
-    "title": "15.8  |  Spherical coordinates follow the shell",
-    "start": 617.375,
-    "duration": 35.708
-  },
-  {
-    "title": "Three lengths explain the spherical factor",
-    "start": 653.083,
-    "duration": 37.917
-  },
-  {
-    "title": "A ball checks the geometry",
-    "start": 691.0,
-    "duration": 35.0
-  },
-  {
-    "title": "15.9  |  Every coordinate change stretches tiles",
-    "start": 726.0,
-    "duration": 39.292
-  },
-  {
-    "title": "Straighten the region; pay for the stretching",
-    "start": 765.292,
-    "duration": 38.5
-  },
-  {
-    "title": "The whole chapter, in one picture",
-    "start": 803.792,
-    "duration": 41.75
+    "title": "15.9 \u00b7 The Jacobian: local area scaling",
+    "start": 535.299,
+    "duration": 81.9
   }
 ]

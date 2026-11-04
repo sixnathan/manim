@@ -8,3 +8,11 @@ output/concat.txt
 output/chapters.ffmeta
 assets/audio/test.mp3
 assets/original_audio_map.json
+.tools/
+.manim-env/
+v2/media/
+v2/audio/
+v2/previews/
+v2/*.log
+v2/*.png
+v2/contact.jpg

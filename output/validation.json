@@ -1,11 +1,13 @@
 {
-  "full_decode": "PASS",
-  "resolution": "1280x720",
-  "frame_rate": 24,
-  "chapters": 23,
-  "audio": "AAC, synthetic English narration",
-  "subtitles": "burned in and embedded mov_text",
-  "duration_seconds": 845.584,
-  "size_bytes": 23903871,
-  "mathematics_checks": "9 PASS; see math_checks.txt"
+  "full_audio_video_decode": "PASS",
+  "cue_timing_all_49_passages": "PASS",
+  "resolution": "1920x1080",
+  "fps": 30,
+  "duration_seconds": 617.199023,
+  "section_markers": 9,
+  "narration": "synthetic en-US-AndrewNeural",
+  "captions": "optional embedded English mov_text; SRT and WebVTT supplied",
+  "size_bytes": 50943529,
+  "renderer": "Manim Community 0.22.1 / Cairo",
+  "worked_result_checks": "See math_checks.txt (nine numerical checks; original results retained in the rebuilt film)."
 }
