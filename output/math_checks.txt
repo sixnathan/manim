@@ -1,0 +1,9 @@
+rectangle: computed 3.000000000000, expected 3.000000000000, PASS
+lens_area: computed 0.166666666667, expected 0.166666666667, PASS
+dome: computed 1.570796326795, expected 1.570796326795, PASS
+mass: computed 1.500000000000, expected 1.500000000000, PASS
+center_x: computed 0.555555555556, expected 0.555555555556, PASS
+center_y: computed 0.500000000000, expected 0.500000000000, PASS
+surface_area: computed 1.732050807569, expected 1.732050807569, PASS
+volume_tetrahedron: computed 0.166666666667, expected 0.166666666667, PASS
+unit_ball: computed 4.188790204786, expected 4.188790204786, PASS

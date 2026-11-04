@@ -1,0 +1,10 @@
+.venv/
+.cache/
+__pycache__/
+output/scene_*.mp4
+output/preview_*.png
+output/*_check.png
+output/concat.txt
+output/chapters.ffmeta
+assets/audio/test.mp3
+assets/original_audio_map.json

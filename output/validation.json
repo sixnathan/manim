@@ -1,0 +1,11 @@
+{
+  "full_decode": "PASS",
+  "resolution": "1280x720",
+  "frame_rate": 24,
+  "chapters": 23,
+  "audio": "AAC, synthetic English narration",
+  "subtitles": "burned in and embedded mov_text",
+  "duration_seconds": 845.584,
+  "size_bytes": 23903871,
+  "mathematics_checks": "9 PASS; see math_checks.txt"
+}

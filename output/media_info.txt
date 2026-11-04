@@ -1,0 +1,93 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/nathankarri/Desktop/manim/output/chapter15_multiple_integrals.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : The Geometry of Adding — Multiple Integrals
+    artist          : Original educational animation
+    encoder         : Lavf63.1.102
+  Duration: 00:14:05.58, start: 0.000000, bitrate: 226 kb/s
+  Chapters:
+    Chapter #0:0: start 0.000000, end 37.833000
+      Metadata:
+        title           : One idea, in more dimensions
+    Chapter #0:1: start 37.833000, end 69.000000
+      Metadata:
+        title           : 15.1  |  A landscape made of columns
+    Chapter #0:2: start 69.000000, end 105.625000
+      Metadata:
+        title           : Refinement is the meaning of the integral
+    Chapter #0:3: start 105.625000, end 145.667000
+      Metadata:
+        title           : 15.1  |  Add a row, then add the rows
+    Chapter #0:4: start 145.667000, end 181.875000
+      Metadata:
+        title           : Fubini: two ways of grouping the same pieces
+    Chapter #0:5: start 181.875000, end 217.167000
+      Metadata:
+        title           : 15.2  |  Bounds are a moving scan line
+    Chapter #0:6: start 217.167000, end 252.042000
+      Metadata:
+        title           : Turn the scan line sideways
+    Chapter #0:7: start 252.042000, end 289.625000
+      Metadata:
+        title           : 15.3  |  Why a polar tile gets wider
+    Chapter #0:8: start 289.625000, end 326.333000
+      Metadata:
+        title           : A dome becomes a one-line calculation
+    Chapter #0:9: start 326.333000, end 360.083000
+      Metadata:
+        title           : 15.4  |  The integrand decides what you add
+    Chapter #0:10: start 360.083000, end 396.417000
+      Metadata:
+        title           : Balance is a weighted average of position
+    Chapter #0:11: start 396.417000, end 438.042000
+      Metadata:
+        title           : Probability is another kind of density
+    Chapter #0:12: start 438.042000, end 479.292000
+      Metadata:
+        title           : 15.5  |  The surface is larger than its shadow
+    Chapter #0:13: start 479.292000, end 515.750000
+      Metadata:
+        title           : A tilted plane makes the factor visible
+    Chapter #0:14: start 515.750000, end 552.167000
+      Metadata:
+        title           : 15.6  |  Fill space with tiny boxes
+    Chapter #0:15: start 552.167000, end 585.667000
+      Metadata:
+        title           : Read a solid from the inside outward
+    Chapter #0:16: start 585.667000, end 617.375000
+      Metadata:
+        title           : 15.7  |  Cylindrical coordinates stack polar tiles
+    Chapter #0:17: start 617.375000, end 653.083000
+      Metadata:
+        title           : 15.8  |  Spherical coordinates follow the shell
+    Chapter #0:18: start 653.083000, end 691.000000
+      Metadata:
+        title           : Three lengths explain the spherical factor
+    Chapter #0:19: start 691.000000, end 726.000000
+      Metadata:
+        title           : A ball checks the geometry
+    Chapter #0:20: start 726.000000, end 765.292000
+      Metadata:
+        title           : 15.9  |  Every coordinate change stretches tiles
+    Chapter #0:21: start 765.292000, end 803.792000
+      Metadata:
+        title           : Straighten the region; pay for the stretching
+    Chapter #0:22: start 803.792000, end 845.542000
+      Metadata:
+        title           : The whole chapter, in one picture
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 133 kb/s, 24 fps, 24 tbr, 12288 tbn, start 0.041992 (default)
+    Metadata:
+      handler_name    : VideoHandler
+      encoder         : Lavc63.1.102 libx264
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 87 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+  Stream #0:2[0x3](eng): Subtitle: mov_text (tx3g / 0x67337874), 0 kb/s (default)
+    Metadata:
+      handler_name    : SubtitleHandler
+  Stream #0:3[0x4](eng): Data: bin_data (text / 0x74786574), 0 kb/s
+    Metadata:
+      handler_name    : SubtitleHandler
+At least one output file must be specified
